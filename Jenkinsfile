@@ -8,11 +8,14 @@ pipeline {
     }
 
     stages {
-        stage('Build Image') {
-            steps {
-                sh 'docker build -t $IMAGE_NAME .'
-            }
-        }
+       stage('Build Docker Image') {
+    steps {
+        sh '''
+        docker build -t grandiosoft-website:$BUILD_NUMBER .
+        '''
+    }
+}
+
 
         stage('Cleanup Old Container') {
             steps {
@@ -21,6 +24,16 @@ pipeline {
                 '''
             }
         }
+
+        stage('Run New Container') {
+            steps {
+                sh '''
+                docker run -d -p 8081:80 --name grandiosoft \
+                grandiosoft-website:$BUILD_NUMBER
+                '''
+            }
+        }
+
 
         stage('Deploy') {
             steps {
