@@ -11,7 +11,7 @@ pipeline {
        stage('Build Docker Image') {
     steps {
         sh '''
-        docker build -t grandiosoft-website:$BUILD_NUMBER .
+        docker build -t grandiosoft-website:$38 .
         '''
     }
 }
@@ -29,10 +29,10 @@ pipeline {
             steps {
                 sh '''
                 docker run -d -p 8081:80 --name grandiosoft \
-                grandiosoft-website:$BUILD_NUMBER
+                grandiosoft-website:38
                 '''
             }
-        }
+    }
 
 
         stage('Deploy') {
