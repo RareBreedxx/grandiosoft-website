@@ -8,19 +8,19 @@ pipeline {
     }
 
     stages {
-       stage('Build Docker Image') {
-    steps {
-        sh '''
-        docker build -t grandiosoft-website:$38 .
-        '''
-    }
-}
 
+        stage('Build Docker Image') {
+            steps {
+                sh '''
+                docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .
+                '''
+            }
+        }
 
         stage('Cleanup Old Container') {
             steps {
                 sh '''
-                docker ps -q --filter "name=$CONTAINER_NAME" | xargs -r docker rm -f
+                docker ps -q --filter "name=${CONTAINER_NAME}" | xargs -r docker rm -f
                 '''
             }
         }
@@ -28,18 +28,11 @@ pipeline {
         stage('Run New Container') {
             steps {
                 sh '''
-                docker run -d -p 8081:80 --name grandiosoft \
-                grandiosoft-website:38
+                docker run -d -p ${PORT}:80 \
+                --name ${CONTAINER_NAME} \
+                ${IMAGE_NAME}:${BUILD_NUMBER}
                 '''
-            }
-    }
-
-
-        stage('Deploy') {
-            steps {
-                sh 'docker run -d -p $PORT:80 --name $CONTAINER_NAME $IMAGE_NAME'
             }
         }
     }
 }
-
