@@ -1,25 +1,32 @@
 pipeline {
     agent any
 
+    environment {
+        IMAGE_NAME = "grandiosoft-website"
+        CONTAINER_NAME = "grandiosoft"
+        PORT = "8081"
+    }
+
     stages {
-        stage('Build Docker Image') {
+        stage('Build Image') {
             steps {
-                sh 'docker build -t grandiosoft-website .'
+                sh 'docker build -t $IMAGE_NAME .'
             }
         }
 
-        stage('Stop Old Container') {
-    steps {
-        sh '''
-        docker ps -q --filter "name=grandiosoft" | xargs -r docker rm -f
-        '''
-    }
-}
-
-        stage('Run New Container') {
+        stage('Cleanup Old Container') {
             steps {
-                sh 'docker run -d -p 8081:80 --name grandiosoft grandiosoft-website'
+                sh '''
+                docker ps -q --filter "name=$CONTAINER_NAME" | xargs -r docker rm -f
+                '''
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'docker run -d -p $PORT:80 --name $CONTAINER_NAME $IMAGE_NAME'
             }
         }
     }
 }
+
