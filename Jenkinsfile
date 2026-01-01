@@ -9,10 +9,12 @@ pipeline {
         }
 
         stage('Stop Old Container') {
-            steps {
-                sh 'docker rm -f grandiosoft || true'
-            }
-        }
+    steps {
+        sh '''
+        docker ps -q --filter "name=grandiosoft" | xargs -r docker rm -f
+        '''
+    }
+}
 
         stage('Run New Container') {
             steps {
