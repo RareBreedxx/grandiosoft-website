@@ -30,6 +30,7 @@ pipeline {
                 sh '''
                 docker run -d -p ${PORT}:80 \
                 --name ${CONTAINER_NAME} \
+                --restart unless-stopped \
                 ${IMAGE_NAME}:${BUILD_NUMBER}
                 '''
             }
