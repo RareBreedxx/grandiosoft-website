@@ -5,6 +5,7 @@ pipeline {
         IMAGE_NAME = "grandiosoft-website"
         CONTAINER_NAME = "grandiosoft"
         PORT = "8081"
+        ENVIRONMENT = "production"
     }
 
     stages {
@@ -31,6 +32,7 @@ pipeline {
                 docker run -d -p ${PORT}:80 \
                 --name ${CONTAINER_NAME} \
                 --restart unless-stopped \
+                -e ENVIRINMENT=${ENVIRONMENT} \
                 ${IMAGE_NAME}:${BUILD_NUMBER}
                 '''
             }
