@@ -26,10 +26,16 @@ pipeline {
             }
         }
 
-        stage('Run New Container') {
-            steps {
-                 sh "docker run -d -p ${PORT}:80 --name ${CONTAINER_NAME} --restart unless-stopped -e ENVIRONMENT=${ENVIRONMENT} ${IMAGE_NAME}:${BUILD_NUMBER}"
-            }
-        }
+       stage('Run New Container') {
+             steps {
+               sh '''
+               docker run -d -p ${PORT}:80 \
+              --name ${CONTAINER_NAME} \
+              --restart unless-stopped \
+              -e ENVIRONMENT=${ENVIRONMENT} \
+              ${IMAGE_NAME}:${BUILD_NUMBER}
+            '''
+         }
     }
-}
+
+}  
