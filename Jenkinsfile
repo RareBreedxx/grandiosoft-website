@@ -37,5 +37,12 @@ pipeline {
                 '''
             }
         }
+        parameters {
+             choice(
+                name: 'TARGET_ENV',
+                choices: ['dev', 'prod'],
+                description: 'Deployment environment'
+            )
+        }
     }
 }
