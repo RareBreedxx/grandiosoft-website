@@ -20,7 +20,6 @@ pipeline {
         stage('Update Kubernetes Manifest') {
             steps {
                 sh """
-                cd site/k8s
                 sed -i 's|image: .*|image: ${IMAGE_NAME}:${IMAGE_TAG}|' deployment.yaml
                 """
             }
@@ -32,6 +31,7 @@ pipeline {
                 cd site/k8s
                 kubectl apply -f deployment.yaml
                 kubectl apply -f service.yaml
+                kubectl apply -f ingress.yaml
                 """
             }
         }
@@ -41,6 +41,7 @@ pipeline {
                 sh """
                 kubectl rollout status deployment/grandiosoft-web
                 kubectl get pods
+                kubectl get svc
                 """
             }
         }
