@@ -20,6 +20,7 @@ pipeline {
         stage('Update Kubernetes Manifest') {
             steps {
                 sh """
+                cd site/k8s
                 sed -i 's|image: .*|image: ${IMAGE_NAME}:${IMAGE_TAG}|' deployment.yaml
                 """
             }
