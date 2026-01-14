@@ -30,8 +30,8 @@ pipeline {
             steps {
                 sh """
                 cd site/k8s
-                kubectl apply -f ${K8S_DIR}/deployment.yaml
-                kubectl apply -f ${K8S_DIR}/service.yaml
+                kubectl apply -f deployment.yaml
+                kubectl apply -f service.yaml
                 """
             }
         }
