@@ -16,22 +16,22 @@ pipeline {
                 """
             }
         }
-
+        
+        
+        
         stage('Update Kubernetes Manifest') {
             steps {
-                sh """
-                sed -i 's|image: .*|image: ${IMAGE_NAME}:${IMAGE_TAG}|' deployment.yaml
-                """
+                    sh '''
+                    sed -i "s|image: .*|image: grandiosoft-website:${BUILD_NUMBER}|" site/k8s/deployment.yaml'''
             }
         }
 
         stage('Deploy to Kubernetes') {
             steps {
                 sh """
-                cd site/k8s
-                kubectl apply -f deployment.yaml
-                kubectl apply -f service.yaml
-                kubectl apply -f ingress.yaml
+                kubectl apply -f site/k8s/deployment.yaml
+                kubectl apply -f site/k8s/service.yaml
+                kubectl apply -f site/k8s/ingress.yaml
                 """
             }
         }
