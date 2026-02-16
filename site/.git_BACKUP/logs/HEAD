@@ -1,0 +1,27 @@
+0000000000000000000000000000000000000000 84f56a4d1a520a2e85c83fc435b361ceb3e86097 Yinka Fadoju <o.fadoju@yahoo.com> 1767142281 -0500	commit (initial): Initial Grandiosft website with Docker and Jenkins
+84f56a4d1a520a2e85c83fc435b361ceb3e86097 0000000000000000000000000000000000000000 Yinka Fadoju <o.fadoju@yahoo.com> 1767142694 -0500	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 84f56a4d1a520a2e85c83fc435b361ceb3e86097 Yinka Fadoju <o.fadoju@yahoo.com> 1767142694 -0500	Branch: renamed refs/heads/master to refs/heads/main
+84f56a4d1a520a2e85c83fc435b361ceb3e86097 0000000000000000000000000000000000000000 Yinka Fadoju <o.fadoju@yahoo.com> 1767142819 -0500	Branch: renamed refs/heads/main to refs/heads/main
+84f56a4d1a520a2e85c83fc435b361ceb3e86097 84f56a4d1a520a2e85c83fc435b361ceb3e86097 Yinka Fadoju <o.fadoju@yahoo.com> 1767142819 -0500	Branch: renamed refs/heads/main to refs/heads/main
+84f56a4d1a520a2e85c83fc435b361ceb3e86097 0000000000000000000000000000000000000000 Yinka Fadoju <o.fadoju@yahoo.com> 1767143047 -0500	Branch: renamed refs/heads/main to refs/heads/main
+84f56a4d1a520a2e85c83fc435b361ceb3e86097 84f56a4d1a520a2e85c83fc435b361ceb3e86097 Yinka Fadoju <o.fadoju@yahoo.com> 1767143047 -0500	Branch: renamed refs/heads/main to refs/heads/main
+84f56a4d1a520a2e85c83fc435b361ceb3e86097 e40bd01eaf630daf5305f654822872b6fe4968e9 Yinka Fadoju <o.fadoju@yahoo.com> 1767143564 -0500	commit: Add Jenkinsfile for CI/CD pipeline
+e40bd01eaf630daf5305f654822872b6fe4968e9 671d4c81cd6dd34381badd6493bdc57520ec9336 Yinka Fadoju <o.fadoju@yahoo.com> 1767296058 -0700	commit: Fix container cleanup to avoid port conflicts
+671d4c81cd6dd34381badd6493bdc57520ec9336 0dc1a784d7de245ba15b44e817ce8ac7e4edfac4 Yinka Fadoju <o.fadoju@yahoo.com> 1767299508 -0700	commit: Adding environment logic
+0dc1a784d7de245ba15b44e817ce8ac7e4edfac4 39b63d3c18c22b949861aae3e5fd6df40bd82f2a Yinka Fadoju <o.fadoju@yahoo.com> 1767300537 -0500	commit: Adding roll back logic
+39b63d3c18c22b949861aae3e5fd6df40bd82f2a 3ea1b36e2c8c2fef0f440614d43f38838e3635a5 Yinka Fadoju <o.fadoju@yahoo.com> 1767301206 -0500	commit: Adding roll back logic with build number
+3ea1b36e2c8c2fef0f440614d43f38838e3635a5 108cafb43310009e22d02ca8bac38eeed1681001 Yinka Fadoju <o.fadoju@yahoo.com> 1767303352 -0500	commit: Adding roll back logic with build number
+108cafb43310009e22d02ca8bac38eeed1681001 8f5ce467b9b0d0ef7b0be9eefa423f0d9840aea1 Yinka Fadoju <o.fadoju@yahoo.com> 1767305619 -0500	commit: Added health check to Jenkins
+8f5ce467b9b0d0ef7b0be9eefa423f0d9840aea1 0392aa13339948b78e6536c58f619c961e206832 Yinka Fadoju <o.fadoju@yahoo.com> 1767402754 -0500	commit: Added env variable for production
+0392aa13339948b78e6536c58f619c961e206832 7a61a7ab50eb996487c087df6bfa176da4202b48 Yinka Fadoju <o.fadoju@yahoo.com> 1767403438 -0500	commit: Fix env injection using single-line docker run
+7a61a7ab50eb996487c087df6bfa176da4202b48 36d5dfb6187e2df823f10af176b52ab67a15d1eb Yinka Fadoju <o.fadoju@yahoo.com> 1767404201 -0500	commit: Fix env injection using single-line docker run
+36d5dfb6187e2df823f10af176b52ab67a15d1eb 9ba2b34da4f25e78c70929896e4f55038b73c7b1 Yinka Fadoju <o.fadoju@yahoo.com> 1767404497 -0500	commit: Fix env injection using single-line docker run
+9ba2b34da4f25e78c70929896e4f55038b73c7b1 a3ca0093f519169dcb56ec87cee6385dd7c67991 Yinka Fadoju <o.fadoju@yahoo.com> 1767405454 -0500	commit: Adding Prod variables
+a3ca0093f519169dcb56ec87cee6385dd7c67991 d314940f4835f5db1d3a6d8be1e8c4dd2ca4c4e8 Yinka Fadoju <o.fadoju@yahoo.com> 1767406337 -0500	commit: Adding Prod variables
+d314940f4835f5db1d3a6d8be1e8c4dd2ca4c4e8 feb0d9e1d24a3a36be8f10e19b399896e6764b63 Yinka Fadoju <o.fadoju@yahoo.com> 1768350690 -0500	commit: Add Deployment to k8s
+feb0d9e1d24a3a36be8f10e19b399896e6764b63 379fb1a6cd7bfc5a3a2bbe78664a68e8299fd7be Yinka Fadoju <o.fadoju@yahoo.com> 1768432524 -0500	commit: Updated Jenkinfile for k8s deployment
+379fb1a6cd7bfc5a3a2bbe78664a68e8299fd7be 1362857a15d2382ab63db6aa91612b42ca3a674c Yinka Fadoju <o.fadoju@yahoo.com> 1768432949 -0500	commit: Updated Jenkinfile for k8s deployment
+1362857a15d2382ab63db6aa91612b42ca3a674c f558a496643fdc227aa57d6882f92819b570ff15 Yinka Fadoju <o.fadoju@yahoo.com> 1768433117 -0500	commit: Updated Jenkinfile for k8s deployment
+f558a496643fdc227aa57d6882f92819b570ff15 8a34f44125225285da84ebd64e16ac6eea198113 Yinka Fadoju <o.fadoju@yahoo.com> 1768433593 -0500	commit: Fix Jenkinsfile for k8s manifests
+8a34f44125225285da84ebd64e16ac6eea198113 4b9281dd461424e9c8d946d9eebd450975e5a806 Yinka Fadoju <o.fadoju@yahoo.com> 1768434130 -0500	commit: Add kubernetes manifests
+4b9281dd461424e9c8d946d9eebd450975e5a806 196c219d7aecd104141128cc11a42f703b3fdadd Yinka Fadoju <o.fadoju@yahoo.com> 1768774699 -0500	commit: Fix Jenkinsfile path for k8s manifests
