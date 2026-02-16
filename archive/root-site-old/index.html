@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grandiosoft Technology</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Modern, clean sans-serif for a professional tech brand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="logo" href="#home" aria-label="Grandiosoft Technology home">
+        <!-- Inline SVG logo: angular monoline G with a single dot -->
+        <svg class="logo-mark" width="44" height="44" viewBox="0 0 44 44" role="img" aria-label="Grandiosoft logo">
+          <!-- Single continuous stroke G -->
+          <path d="M30 14
+                   H18
+                   L14 18
+                   V30
+                   L18 34
+                   H30
+                   V26
+                   H24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+          <!-- Intelligence dot: upper-right inner edge of the G -->
+          <circle cx="26.5" cy="18.5" r="2.2" class="logo-dot"/>
+        </svg>
+        <span class="logo-text">GRANDIOSOFT TECHNOLOGY</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        Menu
+      </button>
+
+      <div id="nav-links" class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section id="home" class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Technology Company</p>
+        <h1>Systems That Think</h1>
+        <p class="hero-subtitle">
+          Grandiosoft Technology delivers intelligent infrastructure, cloud engineering,
+          and automation that scales with your business.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#contact">Get in Touch</a>
+          <a class="button ghost" href="#services">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card">
+          <p class="hero-card-title">Reliability by Design</p>
+          <p class="hero-card-text">Adaptive systems built for clarity, resilience, and scale.</p>
+          <div class="hero-metrics">
+            <div>
+              <span>99.9%</span>
+              <small>Uptime</small>
+            </div>
+            <div>
+              <span>24/7</span>
+              <small>Observability</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="section about">
+      <div class="section-header">
+        <h2>About</h2>
+        <p>
+          Grandiosoft Technology builds adaptive, intelligent systems inspired by
+          collective intelligence in nature. We help teams modernize platforms
+          with practical DevOps discipline and dependable automation.
+        </p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Purposeful Engineering</h3>
+          <p>We design systems that are simple, reliable, and easy to operate.</p>
+        </div>
+        <div class="about-card">
+          <h3>Trusted Delivery</h3>
+          <p>Clear roadmaps, measurable outcomes, and consistent execution.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section id="services" class="section services">
+      <div class="section-header">
+        <h2>Services</h2>
+        <p>Modern infrastructure solutions for growing and enterprise teams.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Cloud &amp; DevOps Engineering</h3>
+          <p>Cloud strategy, CI/CD, and infrastructure automation tailored to your stack.</p>
+        </article>
+        <article class="card">
+          <h3>Intelligent Infrastructure</h3>
+          <p>Resilient systems designed to adapt, self-correct, and stay observable.</p>
+        </article>
+        <article class="card">
+          <h3>Automation &amp; Scalability</h3>
+          <p>Operational workflows that scale with confidence and reduce manual effort.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="section contact">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>Tell us about your goals. We will respond within one business day.</p>
+      </div>
+      <form class="contact-form" action="#" method="post">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Company
+          <input type="text" name="company" placeholder="Company name">
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+        </label>
+        <button class="button primary" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>GRANDIOSOFT TECHNOLOGY</p>
+    <p>&copy; 2026 Grandiosoft Technology. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
